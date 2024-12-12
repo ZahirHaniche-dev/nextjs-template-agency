@@ -7,10 +7,14 @@ const Hero: React.FC = () => {
   return (
     <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <h1 className="text-2xl font-bold text-white/90 tracking-tight sm:text-4xl md:text-4xl">
-            Votre Partenaire en
-            <span className="block text-customGreen">Conception et Formation Web</span>
+        <div className="flex items-center space-x-6">
+            <div className="bg-customGreen w-10 h-10 rounded-full rounded-tl-none group-hover:-translate-y-1 group-hover:shadow-xl group-hover:via-green-600 transition-all"></div>
+            <h1 className="text-2xl font-bold text-white/90 tracking-tight sm:text-3xl md:text-3xl">
+                Votre Partenaire en
+                <span className="block text-customGreen">Conception et Formation Web</span>
             </h1>
+            </div>
+
             <p className="mt-3 text-base text-white/80 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             Je vous accompagne à chaque étape, de la création de sites web sur mesure à la formation en développement web, pour garantir votre réussite.
             </p>

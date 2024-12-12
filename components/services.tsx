@@ -38,7 +38,7 @@ const Services = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'>
           {services.map((service, index) => {
             return (
-              <div key={index} className='flex-1 flex flex-col justify-center gap-6 group'>
+              <div key={index} className='flex-1 flex flex-col justify-center gap-6 group cursor-pointer'>
                 {/* top */}
                 <div className='w-full flex justify-between items-center'>
                   <Link
@@ -47,10 +47,12 @@ const Services = () => {
                   >
                     <BsArrowDownRight className='text-primary text-3xl' />
                   </Link>
-                  
+                  <div className='text-5xl font-semibold text-outline text-white/80 group-hover:text-outline-hover transition-all duration-500'>
+                    {service.num}
+                  </div>
                 </div>
                 {/* title */}
-                <h2 className='text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500'>
+                <h2 className='text-[32px] font-bold leading-none text-customGreen group-hover:text-accent transition-all duration-500'>
                   {service.title}
                 </h2>
                 {/* description */}
