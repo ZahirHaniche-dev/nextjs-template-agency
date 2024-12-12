@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import { CircleIcon, Home, LogOut } from 'lucide-react';
 import {
   DropdownMenu,
@@ -27,7 +28,7 @@ function Header() {
   }
 
   return (
-    <header className="border-b border-gray-200">
+    <header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
       <Link href="/" className="flex items-center">
         <img
@@ -38,10 +39,10 @@ function Header() {
        
       </Link>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-11">
           <Link
             href="/pricing"
-            className="text-sm font-medium text-gray-700 hover:text-gray-900"
+            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
           >
             Tarifs
           </Link>
@@ -78,7 +79,8 @@ function Header() {
           ) : (
             <Button
               asChild
-              className="bg-black hover:bg-gray-800 text-white text-sm px-4 py-2 rounded-full"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white 
+              transition-colors bg-customGreen  text-primary hover:bg-accent-hover h-[44px] px-6"
             >
               <Link href="/sign-up">Inscription</Link>
             </Button>
@@ -92,8 +94,15 @@ function Header() {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <section className="flex flex-col min-h-screen">
-      <Header />
-      {children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.7, duration: 0.3, ease: 'easeIn' } }}
+       
+      >
+        <Header />
+        {children}
+      </motion.div>
+      
     </section>
   );
 }

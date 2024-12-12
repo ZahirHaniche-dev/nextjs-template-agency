@@ -26,7 +26,7 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
         <div className="flex justify-center">
           <CircleIcon className="h-12 w-12 text-orange-500" />
         </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-white/90">
           {mode === 'signin'
             ? 'Sign in to your account'
             : 'Create your account'}
@@ -53,7 +53,7 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
                 autoComplete="email"
                 required
                 maxLength={50}
-                className="appearance-none rounded-full relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-full relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-white/90 focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your email"
               />
             </div>
@@ -77,7 +77,7 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
                 required
                 minLength={8}
                 maxLength={100}
-                className="appearance-none rounded-full relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-full relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-white/90 focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your password"
               />
             </div>
@@ -113,7 +113,7 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
               <div className="w-full border-t border-gray-300" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-gray-50 text-gray-500">
+              <span className="px-2 bg-gray-50 text-white/80">
                 {mode === 'signin'
                   ? 'New to our platform?'
                   : 'Already have an account?'}

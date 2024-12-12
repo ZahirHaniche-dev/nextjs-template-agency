@@ -1,8 +1,14 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-jetbrainsMono',
+});
 
 export const metadata: Metadata = {
   title: 'Next.js SaaS Starter',
@@ -12,8 +18,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   maximumScale: 1,
 };
-
-const manrope = Manrope({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -25,9 +29,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${manrope.className}`}
+      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${jetbrainsMono.className}`}
     >
-      <body className="min-h-[100dvh] bg-gray-50">
+      <body className="min-h-[100dvh] ">
         <UserProvider userPromise={userPromise}>{children}</UserProvider>
       </body>
     </html>
