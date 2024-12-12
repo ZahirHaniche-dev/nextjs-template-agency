@@ -11,12 +11,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-              <h1 className="text-4xl font-bold text-white/90 tracking-tight sm:text-5xl md:text-6xl">
+              <h1 className="text-2xl font-bold text-white/90 tracking-tight sm:text-4xl md:text-4xl">
                 Votre Partenaire en
                 <span className="block text-customGreen">Conception et Formation Web</span>
               </h1>
               <p className="mt-3 text-base text-white/80 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              De la création de sites web à la formation en développement, nous sommes là pour vous accompagner à chaque étape.
+              Je vous accompagne à chaque étape, de la création de sites web sur mesure à la formation en développement web, pour garantir votre réussite.
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <a
@@ -38,7 +38,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-14 w-full">
+      <section className="py-8 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <Services /> 
         </div>
@@ -46,7 +46,7 @@ export default function HomePage() {
 
 
 
-      <section className="py-14">
+      <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Why />
         </div>
