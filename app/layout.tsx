@@ -14,7 +14,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Next.js SaaS Starter',
   description: 'Get started quickly with Next.js, Postgres, and Stripe.',
+  icons: {
+    icon: '/favicon.ico', // Chemin vers le fichier favicon.ico dans le dossier public
+
+  },
 };
+
 
 export const viewport: Viewport = {
   maximumScale: 1,
