@@ -8,19 +8,19 @@ const services = [
       num: '01',
       title: 'Formation Web',
       description: "Je forme les débutants au développement web en assurant un suivi personnalisé, pour vous rendre autonome et confiant dans vos compétences.",
-      href: 'https://www.linkedin.com/in/zahirhaniche/',
+      href: '/training',
     },
     {
       num: '02',
       title: 'Services Freelance',
       description: "Je propose des services sur mesure en tant que développeur web indépendant, avec une approche flexible et adaptée à vos besoins spécifiques.",
-      href: 'https://www.linkedin.com/in/zahirhaniche/',
+      href: 'https://hanichezahir-portfolio.vercel.app/services',
     },
     {
       num: '03',
       title: 'Solutions Performantes',
       description: "Je conçois et intègre des solutions numériques performantes, respectant les normes SEO, RGAA et l'environnement, pour répondre à vos attentes.",
-      href: 'https://www.linkedin.com/in/zahirhaniche/',
+      href: 'https://hanichezahir-portfolio.vercel.app/resume',
     },
     {
       num: '04',
@@ -46,7 +46,7 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
-                    className='w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
+                    className='w-[50px] h-[50px] rounded-full bg-customGreen group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
                   >
                     <BsArrowDownRight className='text-primary text-3xl' />
                   </Link>

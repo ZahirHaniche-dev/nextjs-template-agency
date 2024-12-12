@@ -10,12 +10,12 @@ export default function HomePage() {
           <Hero />
         </div>
       </section>
-      <section className="py-8 w-full">
+      <section className="py-14 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Services /> 
         </div>
       </section>
-      <section className="py-8 w-full">
+      <section className="py-14 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Why />
         </div>

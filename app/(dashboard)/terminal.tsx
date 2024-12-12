@@ -7,18 +7,19 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'git clone https://github.com/zahirhaniche/web-starter',
-    'npm install',
-    'npm run dev',
-    'Customize your website 🎉',
-  ];
+  'Donnons vie à votre projet web...',
+  'Suivez notre formation pour maîtriser les bases.',
+  'Lancement du serveur de développement... 🚀 ',
+  'Votre projet est prêt ! Nous sommes là pour vous accompagner... 🎉',
+];
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setTerminalStep((prev) =>
         prev < terminalSteps.length - 1 ? prev + 1 : prev
       );
-    }, 500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [terminalStep]);
@@ -26,7 +27,7 @@ export function Terminal() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(terminalSteps.join('\n'));
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 1000);
   };
 
   return (
