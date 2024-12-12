@@ -80,7 +80,7 @@ function Header() {
             <Button
               asChild
               className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white 
-              transition-colors bg-customGreen  text-primary hover:bg-accent-hover h-[44px] px-6"
+              transition-colors bg-customGreen text-primary hover:bg-transparent hover:border hover:border-customGreen hover:text-customGreen h-[44px] px-6"
             >
               <Link href="/sign-up">Inscription</Link>
             </Button>
@@ -97,7 +97,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 0.7, duration: 0.3, ease: 'easeIn' } }}
-       
       >
         <Header />
         {children}
