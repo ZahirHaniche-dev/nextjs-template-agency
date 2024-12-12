@@ -41,10 +41,10 @@ function Header() {
 
         <div className="flex items-center space-x-11">
           <Link
-            href="/pricing"
+            href="/training"
             className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
           >
-            Tarifs
+            Formations
           </Link>
           {user ? (
             <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
