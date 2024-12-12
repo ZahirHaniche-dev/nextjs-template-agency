@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
+import ProfileCard from '@/components/profil';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],

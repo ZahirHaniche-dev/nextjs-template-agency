@@ -6,7 +6,7 @@ const Why: React.FC = () => {
   return (
     <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
       <div>
-        <h2 className="text-3xl font-bold text-white/90 sm:text-4xl">
+        <h2 className="text-3xl font-bold text-white/90 sm:text-3xl">
           Pourquoi choisir nos Services ?
         </h2>
         <p className="mt-3 max-w-3xl text-lg text-white/80">
@@ -25,7 +25,7 @@ const Why: React.FC = () => {
             View the code
             <ArrowRight className="ml-3 h-6 w-6" />
           </Button>
-        </a>
+        </a> 
       </div>
     </div>
   );
