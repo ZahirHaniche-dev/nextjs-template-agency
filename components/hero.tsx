@@ -2,9 +2,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import TrainingImg from "./formation-img";
-import Linkedin from "./ui/linkedin";
 
 const Hero: React.FC = () => {
   const scrollToSection = () => {
@@ -15,49 +14,42 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center pb-28 pt-8 relative">
-      <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-        <div className="flex items-center space-x-6">
-          <div className="bg-customGreen w-10 h-10 rounded-full rounded-tl-none group-hover:-translate-y-1 group-hover:shadow-xl group-hover:via-green-600 transition-all"></div>
-          <h1 className="text-2xl font-bold text-white/90 tracking-tight sm:text-3xl md:text-3xl">
-            Ton Partenaire Idéal pour
-            <span className="block text-customGreen">Créer et Maîtriser le Web</span>
-          </h1>
-        </div>
-        <p className="mt-3 text-base text-white/80 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-          Je t’accompagne à apprendre le métier de développeur et à devenir autonome, tout en
-          proposant mes services pour créer des solutions web accessibles et optimisées pour un SEO
-          exceptionnel.
-        </p>
-        <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-          <div className="flex items-center gap-6">
-            <a
-              href="https://hanichezahir-portfolio.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
-                    bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase flex items-center gap-2">
-                En Savoir Plus Sur Moi
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </a>
-            <Linkedin />
-          </div>
-        </div>
+    <div className="h-screen flex flex-col justify-center items-center text-center bg-transparent relative bottom-24">
+      <div className="flex items-center space-x-6 mb-4">
+        <div className="bg-customGreen w-1.5 h-24 border-full rounded-tl-none transition-all"></div>
+        <h1 className="text-3xl font-bold text-white tracking-tight sm:text-4xl md:text-5xl">
+          Ton Partenaire Idéal pour
+          <span className="block text-customGreen">Créer et Maîtriser le Web</span>
+        </h1>
+        <div className="bg-customGreen w-1.5 h-24 border-full rounded-tl-none transition-all"></div>
       </div>
-      <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-        <TrainingImg />
+      <p className="mt-3 text-lg text-white/80 sm:mt-5 sm:text-xl">
+        Je t’accompagne à apprendre le métier de développeur et à devenir autonome, tout en
+        proposant mes services pour créer des solutions web accessibles et optimisées pour un SEO
+        exceptionnel.
+      </p>
+      <div className="mt-8 flex justify-center">
+        <a
+          href="https://hanichezahir-portfolio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
+              bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase flex items-center gap-2">
+            En Savoir Plus Sur Moi
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </a>
       </div>
       <div
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer pb-8"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
         onClick={scrollToSection}
       >
         <button
-          className="cursor-pointer bg-customGreen px-3 py-2 rounded-md text-gray-900 tracking-wider shadow-xl animate-bounce hover:animate-none"
+          className="bg-customGreen px-3 py-2 rounded-md text-gray-900 tracking-wider shadow-xl animate-bounce hover:animate-none"
         >
           <svg
-            className="w-5 h-5"
+            className="w-6 h-6"
             stroke="currentColor"
             strokeWidth="2"
             viewBox="0 0 24 24"

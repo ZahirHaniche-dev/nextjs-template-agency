@@ -41,10 +41,16 @@ function Header() {
 
         <div className="flex items-center space-x-11 z-10">
           <Link
+            href="/dev"
+            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
+          >
+            Mes Services
+          </Link>
+          <Link
             href="/training"
             className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
           >
-            Formations
+            Mes Formations
           </Link>
           {user ? (
             <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>

@@ -3,7 +3,7 @@
 const Linkedin = () => {
   return (
     <button
-      className="group hover:bg-sky-600 relative bg-sky-700 text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6 rounded-sm"
+      className="group fixed bottom-8 right-8 hover:bg-sky-600 bg-sky-700 text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6 rounded-sm z-50"
     >
       <svg
         className="w-8 h-8 fill-neutral-50"
@@ -19,16 +19,11 @@ const Linkedin = () => {
       </svg>
       <span className="border-l-2 pl-4 flex items-center">
         LinkedIn
-        <span className="relative flex h-3 w-3 ml-4 ">
+        <span className="relative flex h-3 w-3 ml-4">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3 w-3  bg-customGreen"></span>
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-customGreen"></span>
         </span>
       </span>
-      <div
-        className="group-hover:opacity-100 opacity-0 top-16 absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-500 bg-sky-600 rounded-lg shadow-sm before:w-3 before:h-3 before:rotate-45 before:-top-1 before:left-20 before:bg-sky-600 before:absolute"
-      >
-        Regarde mon profil !
-      </div>
     </button>
   );
 };

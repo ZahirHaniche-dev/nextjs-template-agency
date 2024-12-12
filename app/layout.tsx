@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
+import Linkedin from '@/components/ui/linkedin';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -30,10 +31,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-white dark:bg-gray-950 text-black dark:text-white ${jetbrainsMono.className}`}
+      className={`bg-white dark:bg-gray-950 text-black dark:text-white  ${jetbrainsMono.className}`}
     >
-      <body className="min-h-[100dvh] ">
+      <body className="space-bg min-h-[100dvh] overflow-auto">
         <UserProvider userPromise={userPromise}>{children}</UserProvider>
+        <Linkedin  />
       </body>
     </html>
   );

@@ -7,11 +7,12 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-  'Donnons vie à votre projet web...',
-  'Suivez notre formation pour maîtriser les bases.',
-  'Lancement du serveur de développement... 🚀 ',
-  'Votre projet est prêt ! Nous sommes là pour vous accompagner... 🎉',
-];
+    'git add VotreProjet.tsx',
+    'git commit -m "Formation en cours..."',
+    'git push',
+    'Félicitations ! Votre projet est prêt à impressionner le monde 🎉.'
+  ];
+  
 
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export function Terminal() {
   };
 
   return (
-    <div className="w-full rounded-lg shadow-lg overflow-hidden bg-gray-900 text-white font-mono text-base relative">
+    <div className="w-full rounded-lg shadow-lg overflow-hidden border-b-4 border-r-4 hover:border-b-2 hover:border-r-2 border-customGreen bg-gray-900 text-white font-mono text-sm relative">
       <div className="p-4">
         <div className="flex justify-between items-center mb-4">
           <div className="flex space-x-2">

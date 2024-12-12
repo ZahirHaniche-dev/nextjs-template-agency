@@ -56,6 +56,8 @@ const config: Config = {
         },
         // Ajout de la couleur personnalisée
         customGreen: '#00FF99',
+        customYellow: '#ffde59',
+        
       },
     },
   },
