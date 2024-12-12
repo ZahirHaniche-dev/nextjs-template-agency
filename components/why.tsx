@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import DesktopImg from './desktop-img ';
 
 const Why: React.FC = () => {
   return (
@@ -15,17 +14,7 @@ const Why: React.FC = () => {
         </p>
       </div>
       <div className="mt-8 lg:mt-0 flex justify-center lg:justify-end">
-        <a
-          href="https://github.com/leerob/next-saas-starter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
-            bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase flex items-center gap-2">
-            View the code
-            <ArrowRight className="ml-3 h-6 w-6" />
-          </Button>
-        </a> 
+        <DesktopImg />
       </div>
     </div>
   );

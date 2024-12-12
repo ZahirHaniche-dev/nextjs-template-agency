@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { UserProvider } from '@/lib/auth';
 import { getUser } from '@/lib/db/queries';
-import ProfileCard from '@/components/profil';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -13,11 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Next.js SaaS Starter',
-  description: 'Get started quickly with Next.js, Postgres, and Stripe.',
-  icons: {
-    icon: '/favicon.ico', // Chemin vers le fichier favicon.ico dans le dossier public
-
-  },
+  description: 'Get started quickly with Next.js, Postgres, and Stripe.'
 };
 
 
