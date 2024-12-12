@@ -46,7 +46,24 @@ const Hero: React.FC = () => {
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer pb-8"
         onClick={scrollToSection}
       >
-        <ChevronDown className="w-8 h-8 text-white/80 hover:text-customGreen transition duration-300" />
+            <button
+            className="cursor-pointer bg-customGreen px-3 py-2 rounded-md text-gray-900 tracking-wider shadow-xl animate-bounce hover:animate-none"
+            >
+                <svg
+                    className="w-5 h-5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    ></path>
+                </svg>
+            </button>
       </div>
     </div>
   );
