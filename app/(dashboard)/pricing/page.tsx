@@ -1,94 +1,56 @@
-import { checkoutAction } from '@/lib/payments/actions';
-import { Check } from 'lucide-react';
-import { getStripePrices, getStripeProducts } from '@/lib/payments/stripe';
-import { SubmitButton } from './submit-button';
+import React from 'react';
 
-// Prices are fresh for one hour max
-export const revalidate = 3600;
+const pricingData = [
+  {
+    id: 1,
+    title: 'Débutant',
+    features: 'Apprenez les bases du développement web',
+    price: '450 €',
+    description: 'Idéal pour apprendre les fondamentaux et démarrer.',
+    hours: '7 heures'
+  },
+  {
+    id: 2,
+    title: 'Intermédiaire',
+    features: 'Perfectionnez vos compétences techniques',
+    price: '750 €',
+    description: "Parfait pour progresser et aller de l'avant efficacement.",
+    hours: '12 heures'
+  },
+  {
+    id: 3,
+    title: 'Avancée',
+    features: 'Maîtrisez les outils professionnels modernes',
+    price: '1 050 €',
+    description: "Idéal pour exceller avec des frameworks en vogue et reconnus.",
+    hours: '21 heures'
+  },
+];
 
-export default async function PricingPage() {
-  const [prices, products] = await Promise.all([
-    getStripePrices(),
-    getStripeProducts(),
-  ]);
-
-  const basePlan = products.find((product) => product.name === 'Base');
-  const plusPlan = products.find((product) => product.name === 'Plus');
-
-  const basePrice = prices.find((price) => price.productId === basePlan?.id);
-  const plusPrice = prices.find((price) => price.productId === plusPlan?.id);
-
+const Price = () => {
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid md:grid-cols-2 gap-8 max-w-xl mx-auto">
-        <PricingCard
-          name={basePlan?.name || 'Base'}
-          price={basePrice?.unitAmount || 800}
-          interval={basePrice?.interval || 'month'}
-          trialDays={basePrice?.trialPeriodDays || 7}
-          features={[
-            'Unlimited Usage',
-            'Unlimited Workspace Members',
-            'Email Support',
-          ]}
-          priceId={basePrice?.id}
-        />
-        <PricingCard
-          name={plusPlan?.name || 'Plus'}
-          price={plusPrice?.unitAmount || 1200}
-          interval={plusPrice?.interval || 'month'}
-          trialDays={plusPrice?.trialPeriodDays || 7}
-          features={[
-            'Everything in Base, and:',
-            'Early Access to New Features',
-            '24/7 Support + Slack Access',
-          ]}
-          priceId={plusPrice?.id}
-        />
-      </div>
-    </main>
-  );
-}
-
-function PricingCard({
-  name,
-  price,
-  interval,
-  trialDays,
-  features,
-  priceId,
-}: {
-  name: string;
-  price: number;
-  interval: string;
-  trialDays: number;
-  features: string[];
-  priceId?: string;
-}) {
-  return (
-    <div className="pt-6">
-      <h2 className="text-2xl font-medium text-white/90 mb-2">{name}</h2>
-      <p className="text-sm text-gray-600 mb-4">
-        with {trialDays} day free trial
-      </p>
-      <p className="text-4xl font-medium text-white/90 mb-6">
-        ${price / 100}{' '}
-        <span className="text-xl font-normal text-gray-600">
-          per user / {interval}
-        </span>
-      </p>
-      <ul className="space-y-4 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <Check className="h-5 w-5 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <form action={checkoutAction}>
-        <input type="hidden" name="priceId" value={priceId} />
-        <SubmitButton />
-      </form>
+    <div className="flex flex-row justify-center items-center flex-wrap gap-4 py-16">
+      {pricingData.map((plan) => (
+        <div
+          key={plan.id}
+          className="card text-white w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative"
+        >
+          <div className="px-8 py-10">
+            <div className="bg-customGreen w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:via-green-600 transition-all"></div>
+            <div className="uppercase font-bold text-xl">{plan.title}</div>
+            <div className="text-white/80 uppercase tracking-widest text-xs">{plan.features}</div>
+            <div className="text-white/80 mt-8">
+              <p className="font-bold text-lg text-customGreen">{plan.price}</p>
+              <p>{plan.description}</p>
+              <p className="mt-2">Durée : {plan.hours}</p>
+            </div>
+          </div>
+          <div className="h-2 w-full bg-gradient-to-l via-green-600 group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+          <div className="h-0.5 group-hover:w-full bg-gradient-to-l via-green-400 group-hover:via-green-600 w-[70%] m-auto rounded transition-all"></div>
+        </div>
+      ))}
     </div>
   );
-}
+};
+
+export default Price;
