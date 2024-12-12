@@ -54,6 +54,8 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Ajout de la couleur personnalisée
+        customGreen: '#00FF99',
       },
     },
   },
