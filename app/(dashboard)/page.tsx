@@ -11,7 +11,7 @@ export default function HomePage() {
           <Hero />
         </div>
       </section>
-      <section className="pb-16 w-full">
+      <section className="pb-16 w-full"  id="next-section">
         <PresentationProfil />
       </section>
       <section className="pb-16 w-full">

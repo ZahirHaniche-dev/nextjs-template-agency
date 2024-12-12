@@ -1,12 +1,20 @@
+"use client"
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
-import { Terminal } from '@/app/(dashboard)/terminal';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import TrainingImg from './formation-img';
 
 const Hero: React.FC = () => {
+  const scrollToSection = () => {
+    const targetSection = document.getElementById('next-section');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="lg:grid lg:grid-cols-12 lg:gap-8 min-h-screen items-center bottom-20 relative z-0">
+    <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center pb-28 pt-8 relative">
       <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
         <div className="flex items-center space-x-6">
           <div className="bg-customGreen w-10 h-10 rounded-full rounded-tl-none group-hover:-translate-y-1 group-hover:shadow-xl group-hover:via-green-600 transition-all"></div>
@@ -16,7 +24,7 @@ const Hero: React.FC = () => {
           </h1>
         </div>
         <p className="mt-3 text-base text-white/80 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-          Je vous accompagne à chaque étape, de la création de sites web sur mesure à la formation en développement web, pour garantir votre réussite.
+          Je t’accompagne à apprendre le métier de développeur et à devenir autonome, tout en proposant mes services pour créer des solutions web accessibles et optimisées pour un SEO exceptionnel.
         </p>
         <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
           <a
@@ -33,6 +41,12 @@ const Hero: React.FC = () => {
       </div>
       <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
         <TrainingImg />
+      </div>
+      <div
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer pb-8"
+        onClick={scrollToSection}
+      >
+        <ChevronDown className="w-8 h-8 text-white/80 hover:text-customGreen transition duration-300" />
       </div>
     </div>
   );
