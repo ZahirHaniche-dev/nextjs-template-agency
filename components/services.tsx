@@ -4,32 +4,32 @@ import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
 
 const services = [
-  {
-    num: '01',
-    title: 'Développement Front-End',
-    description: 'Création d\'interfaces modernes et performantes avec React, Angular, et Vue.js, optimisées pour une expérience utilisateur fluide.',
-    href: 'https://www.linkedin.com/in/zahirhaniche/',
-  },
-  {
-    num: '02',
-    title: 'Développement Back-End',
-    description: 'Conception et implémentation de solutions robustes avec Node.js, intégration d\'API et gestion des bases de données.',
-    href: 'https://www.linkedin.com/in/zahirhaniche/',
-  },
-  {
-    num: '03',
-    title: 'Intégration Liferay DXP',
-    description: 'Expertise dans la personnalisation, la migration et l\'intégration de solutions Liferay DXP pour des portails d\'entreprise performants.',
-    href: 'https://www.linkedin.com/in/zahirhaniche/',
-  },
-  {
-    num: '04',
-    title: 'Gestion de projet Agile',
-    description: 'Accompagnement en tant que Scrum Master certifié pour garantir le succès des projets grâce à des méthodologies agiles.',
-    href: 'https://www.linkedin.com/in/zahirhaniche/',
-  },
-];
-
+    {
+      num: '01',
+      title: 'Formation Web',
+      description: "Je forme les débutants au développement web en assurant un suivi personnalisé, pour vous rendre autonome et confiant dans vos compétences.",
+      href: 'https://www.linkedin.com/in/zahirhaniche/',
+    },
+    {
+      num: '02',
+      title: 'Services Freelance',
+      description: "Je propose des services sur mesure en tant que développeur web indépendant, avec une approche flexible et adaptée à vos besoins spécifiques.",
+      href: 'https://www.linkedin.com/in/zahirhaniche/',
+    },
+    {
+      num: '03',
+      title: 'Solutions Performantes',
+      description: "Je conçois et intègre des solutions numériques performantes, respectant les normes SEO, RGAA et l'environnement, pour répondre à vos attentes.",
+      href: 'https://www.linkedin.com/in/zahirhaniche/',
+    },
+    {
+      num: '04',
+      title: 'Accompagnement Continu',
+      description: "Je reste disponible pour un suivi personnalisé après vos projets, en assurant un soutien constant et adapté à vos évolutions.",
+      href: 'https://www.linkedin.com/in/zahirhaniche/',
+    },
+  ];
+  
 
 const Services = () => {
   return (
@@ -46,7 +46,7 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
-                    className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
+                    className='w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
                   >
                     <BsArrowDownRight className='text-primary text-3xl' />
                   </Link>
