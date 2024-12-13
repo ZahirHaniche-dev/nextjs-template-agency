@@ -6,10 +6,10 @@ const PresentationProfil: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
         <div>
-          <h2 className="text-3xl font-bold text-white/90 sm:text-2xl">
+          <h2 className="text-3xl font-bold text-white/90 sm:text-3xl pb-6">
             Découvrez Mon Parcours
           </h2>
-          <p className="mt-3 max-w-3xl text-sm text-white/80">
+          <p className="mt-3 max-w-3xl text-base text-white/80">
             <span className="font-semibold text-customGreen">Plus de 10 ans d'expérience</span> en développement web.  
             <br /> <br /> 
             <span className="font-semibold text-customGreen">Expert en solutions numériques innovantes</span>, performantes et sur mesure.  
@@ -29,7 +29,9 @@ const PresentationProfil: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="bg-customGreen w-full h-0.5 rounded-lg border-full rounded-tl-none transition-all my-20"></div>
+      <div className="flex items-center justify-center">
+        <div className="bg-customGreen w-[50%] h-1.5 border-full rounded-tl-none transition-all my-20"></div>
+      </div>
     </div>
   );
 };

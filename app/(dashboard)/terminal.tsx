@@ -7,14 +7,12 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'git add VotreProjet.tsx',
-    'git commit -m "Formation en cours..."',
-    'git push',
-    'Félicitations ! Votre projet est prêt à impressionner le monde 🎉.'
+    'npm install TonFuturDeveloppeur',
+    'Démarrage de votre parcours... 🚀',
+    'Création de sites performants en cours...',
+    'Félicitations ! Vous êtes prêt à conquérir le web et à impressionner le monde. 🎉 '
   ];
   
-
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setTerminalStep((prev) =>
