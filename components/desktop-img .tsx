@@ -9,7 +9,7 @@ const DesktopImg = () => {
         <img 
           src="/assets/formation_join.png" 
           alt="Rejoins-nous et découvre mes formations" 
-          className="mx-auto w-max cursor-pointer"
+          className="mx-auto w-max cursor-pointer hover:scale-105 transition-transform duration-200"
         />
       </Link>
     </section>

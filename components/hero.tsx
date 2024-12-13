@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <><div className="h-[740px] flex flex-col justify-center items-center text-center bg-transparent relative bottom-20">
-    <div className="flex items-center space-x-6 mb-4">
+    <><div className="h-[740px] flex flex-col justify-center items-center hover:scale-105 transition-transform duration-200 text-center bg-transparent relative bottom-20">
+    <div className="flex items-center space-x-6 mb-4 ">
       <div className="bg-customGreen w-1.5 h-24 border-full rounded-tl-none transition-all"></div>
       <h1 className="text-3xl font-bold text-white tracking-tight sm:text-4xl md:text-6xl">
         <span className="font-light">Transformez vos idées</span>
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-center items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-center items-center hover:scale-105 transition-transform duration-200">
           <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
               bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-lg tracking-[2px] uppercase flex items-center gap-2">
             En Savoir Plus Sur Moi

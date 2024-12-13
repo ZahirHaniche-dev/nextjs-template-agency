@@ -30,43 +30,38 @@ function Header() {
   return (
     <header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center z-10">
-          <img
-            src="/images/logo.svg"
-            alt="Logo ZH DEV"
-            className="w-36"
-          />
-        
+        <Link
+          href="/"
+          className="flex items-center z-10 hover:scale-105 transition-transform duration-200"
+        >
+          <img src="/images/logo.svg" alt="Logo ZH DEV" className="w-36" />
         </Link>
 
         <div className="flex items-center space-x-11 z-10">
           <Link
             href="/dev"
-            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
+            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen hover:scale-105 transition-transform duration-200"
           >
             Mes Services
           </Link>
           <Link
             href="/training"
-            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen transition-all"
+            className="text-customGreen border-b-2 border-customGreen capitalize font-medium hover:text-customGreen hover:scale-105 transition-transform duration-200"
           >
             Mes Formations
           </Link>
           {user ? (
             <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <DropdownMenuTrigger asChild>
-                <Avatar className="cursor-pointer size-9">
+                <Avatar className="cursor-pointer size-9 hover:scale-105 transition-transform duration-200">
                   <AvatarImage alt={user.name || ''} />
                   <AvatarFallback>
-                    {user.email
-                      .split(' ')
-                      .map((n) => n[0])
-                      .join('')}
+                    {user.email.split(' ').map((n) => n[0]).join('')}
                   </AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="flex flex-col gap-1">
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem className="cursor-pointer hover:scale-105 transition-transform duration-200">
                   <Link href="/dashboard" className="flex w-full items-center">
                     <Home className="mr-2 h-4 w-4" />
                     <span>Tableau de bord</span>
@@ -74,7 +69,7 @@ function Header() {
                 </DropdownMenuItem>
                 <form action={handleSignOut} className="w-full">
                   <button type="submit" className="flex w-full">
-                    <DropdownMenuItem className="w-full flex-1 cursor-pointer">
+                    <DropdownMenuItem className="w-full flex-1 cursor-pointer hover:scale-105 transition-transform duration-200">
                       <LogOut className="mr-2 h-4 w-4" />
                       <span>Déconnexion</span>
                     </DropdownMenuItem>
@@ -86,7 +81,7 @@ function Header() {
             <Button
               asChild
               className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white 
-              transition-colors bg-customGreen text-primary hover:bg-transparent hover:border hover:border-customGreen hover:text-customGreen h-[44px] px-6"
+              transition-colors bg-customGreen text-primary hover:bg-transparent hover:border hover:border-customGreen hover:text-customGreen hover:scale-105 transition-transform duration-200 h-[44px] px-6"
             >
               <Link href="/sign-up">Inscription</Link>
             </Button>
@@ -94,6 +89,7 @@ function Header() {
         </div>
       </div>
     </header>
+
   );
 }
 
