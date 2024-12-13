@@ -64,9 +64,19 @@ const Price = () => {
 
   return (
     <div className="flex flex-col items-center py-16">
-      <h2 className="text-3xl font-bold text-center text-white/90 sm:text-3xl mb-12">
+      <h2 className="text-3xl font-bold text-center text-white/90 sm:text-3xl mb-8">
         Tarifs et Prise De Rendez-Vous
       </h2>
+      <p className="max-w-4xl text-base text-white/80 mb-8 leading-relaxed">
+        Découvrez nos <span className="font-semibold text-customGreen">offres et formations</span> adaptées à vos besoins. 
+        <br /><br />
+        Chaque offre inclut un <span className="font-semibold text-customGreen">rendez-vous gratuit via Calendly</span> pour discuter de vos attentes. Cet échange me permet de mieux comprendre vos objectifs et de concevoir un suivi personnalisé.
+        <br /><br />
+        Je vous proposerai ensuite des <span className="font-semibold text-customGreen">dates de formation exclusives</span>, intégrant des projets innovants pour mettre en pratique vos apprentissages dans un cadre concret.
+        <br /><br />
+        Et ce n’est pas tout : je reste <span className="font-semibold text-customGreen">disponible</span> même après la formation pour répondre à vos questions, vous <span className="font-semibold text-customGreen">accompagner</span>, et vous <span className="font-semibold text-customGreen">aider dans votre recherche d’emploi</span>.
+      </p>
+
       <div className="flex flex-row justify-center items-center flex-wrap gap-4">
         {pricingData.map((plan) => (
           <div
