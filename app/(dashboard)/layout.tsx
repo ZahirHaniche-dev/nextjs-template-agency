@@ -30,14 +30,14 @@ function Header() {
   return (
     <header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <Link href="/" className="flex items-center z-10">
-        <img
-          src="/images/logo.svg"
-          alt="Logo ZH DEV"
-          className="w-36"
-        />
-       
-      </Link>
+        <Link href="/" className="flex items-center z-10">
+          <img
+            src="/images/logo.svg"
+            alt="Logo ZH DEV"
+            className="w-36"
+          />
+        
+        </Link>
 
         <div className="flex items-center space-x-11 z-10">
           <Link

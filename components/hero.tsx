@@ -32,11 +32,13 @@ const Hero: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
-            bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-lg tracking-[2px] uppercase flex items-center gap-2">
-          En Savoir Plus Sur Moi
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-center items-center">
+          <Button className="justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors border border-customGreen 
+              bg-transparent text-customGreen hover:bg-customGreen hover:text-primary h-[56px] px-8 text-lg tracking-[2px] uppercase flex items-center gap-2">
+            En Savoir Plus Sur Moi
+          </Button>
+        </div>
+        
       </a>
     </div>
     
