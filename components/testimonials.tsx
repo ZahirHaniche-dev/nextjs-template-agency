@@ -7,7 +7,7 @@ const testimonials = [
     title: "FrontEnd Developer chez Inetum",
     feedback: (
       <>
-        Zahir possède un talent avéré pour le management. <br />
+        Je possède un talent avéré pour le management. <br />
         <br />
         Bienveillant, motivant et empathique. <br />
         <br />
